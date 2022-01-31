@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	let answer = {
+		user_answer: +prompt('Введите число от 0 до 999'),
+		a: 0, //еденицы
+		b: 0, //десятки
+		c: 0  //сотни
+	};
+	if (answer.user_answer <= 999){
+		answer.a = Math.floor(answer.user_answer % 10);
+		answer.b = Math.floor(answer.user_answer / 10 % 10);
+		answer.c = Math.floor(answer.user_answer / 100 % 10);
+	} else {
+		console.log('Число должно быть от 0 до 999')
+	}
+	console.log(answer);
+
+</script>
